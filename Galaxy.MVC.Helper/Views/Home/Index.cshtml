@@ -1,0 +1,34 @@
+﻿@model HelperViewModel
+@using Galaxy.MVC.Helper.Helpers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#7030a0">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#7030a0">HTML Helper (StringBuilder)</h5>
+                @Html.ArticleStringBuilder(m => m.ArticlesStringBuilder)
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#1f4e79">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#1f4e79">HTML Helper (TagBuilder)</h5>
+                @Html.ArticleTagBuilder(m => m.ArticlesStringBuilder)
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#00b050">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#00b050">Tag Helper</h5>
+                <list-articles articles="ArticlesTagHelper"></list-articles>
+                <a asp-controller=""></a>
+            </div>
+        </div>
+    </div>
+</div>

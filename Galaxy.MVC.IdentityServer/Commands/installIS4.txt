@@ -1,0 +1,4 @@
+﻿Crear aplicacion web vacias
+Instalar Microsoft.AspNetCore.StaticFiles
+Instalar IdentityServer4
+Copiar las carpetas de IS4 al proyecto

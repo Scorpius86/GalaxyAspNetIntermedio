@@ -1,0 +1,1 @@
+﻿dotnet sql-cache create "Data Source=.;Initial Catalog=Galaxy;User Id = sa;Password=Password123" "dbo" "SQLSessions"

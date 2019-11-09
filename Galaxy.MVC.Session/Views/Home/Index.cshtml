@@ -1,0 +1,63 @@
+﻿@using Microsoft.AspNetCore.Http
+@using Galaxy.MVC.Session.Extensions
+@using Galaxy.MVC.Session.Utility
+
+@inject IHttpContextAccessor HttpContextAccessor
+@inject ApplicationData ApplicationData
+@{
+    int sessionCount = HttpContextAccessor.HttpContext.Session.Get<int>("Count");
+    int appDataCount = ApplicationData.Get<int>("Count");
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#7030a0">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#7030a0">ViewData</h5>
+                <p class="card-text">Contador :</p>
+                <p><strong>@ViewData["Count"]</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#1f4e79">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#1f4e79">ViewBag</h5>
+                <p class="card-text">Contador :<br></p>
+                <p><strong>@ViewBag.Count</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#00b050">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#00b050">TempData</h5>
+                <p class="card-text">Contador :</p>
+                <p><strong>@TempData["Count"]</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#c00000">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#c00000">Session</h5>
+                <p class="card-text">Contador :</p>
+                <p><strong>@sessionCount</strong></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="card shadow p-3 mb-5 bg-white rounded" style="border-color:#2d9dbd">
+            <div class="card-body">
+                <h5 class="card-title" style="color:#2d9dbd">ApplicationData</h5>
+                <p class="card-text">Contador :</p>
+                <p><strong>@appDataCount</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
