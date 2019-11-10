@@ -19,6 +19,7 @@ namespace Galaxy.MVC.Session.Controllers
         }
         public IActionResult Index()
         {
+            ViewData["Count"] = 1;
             if (ViewData.Keys.Contains("Count"))
             {
                 ViewData["Count"] = Convert.ToInt32(ViewData["Count"]) + 1;

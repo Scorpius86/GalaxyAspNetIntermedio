@@ -38,7 +38,9 @@ namespace Galaxy.MVC.Filter
 
 
             services.AddMvc(
-                config => { config.Filters.AddService(typeof(TimerAction)); }    
+                config => {
+                    config.Filters.AddService(typeof(TimerAction));
+                }    
             ).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
         }
