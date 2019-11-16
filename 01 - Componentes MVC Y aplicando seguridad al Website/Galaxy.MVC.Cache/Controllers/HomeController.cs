@@ -59,7 +59,7 @@ namespace Galaxy.MVC.Cache.Controllers
             }
             else
             {
-                cacheViewModel.Distributed = JsonConvert.DeserializeObject<List<string>>(Encoding.UTF8.GetString(_distributedCache.Get("paises"))); 
+                cacheViewModel.Distributed = JsonConvert.DeserializeObject<List<string>>(Encoding.UTF8.GetString(paisesDC)); 
             }
 
             cacheViewModel.Response = _paises;

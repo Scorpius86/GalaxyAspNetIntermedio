@@ -40,8 +40,14 @@ namespace Galaxy.MVC.Cache
                         Duration = 15,
                         Location = ResponseCacheLocation.Any
                     });
+                    config.CacheProfiles.Add("None", new CacheProfile
+                    {
+                        Location = ResponseCacheLocation.None,
+                        NoStore = true
+                    });
                 }    
             ).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddSession();
             services.AddDistributedRedisCache(options =>
             {
                 options.InstanceName = "Galaxy.MVC.Cache.Redis";
@@ -66,6 +72,7 @@ namespace Galaxy.MVC.Cache
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
+            app.UseSession();
 
             app.UseMvc(routes =>
             {

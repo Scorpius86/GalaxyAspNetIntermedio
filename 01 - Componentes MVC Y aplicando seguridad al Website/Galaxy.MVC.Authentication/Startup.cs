@@ -76,12 +76,14 @@ namespace Galaxy.MVC.Authentication
                 options.LoginPath = "/auth/signin";
             });
 
-            //services.AddAuthentication(options => {
+            //services.AddAuthentication(options =>
+            //{
             //    options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             //    options.DefaultSignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             //    options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-            //})           
-            //.AddCookie(options => {
+            //})
+            //.AddCookie(options =>
+            //{
             //    options.LoginPath = "/auth/signin";
             //});
 

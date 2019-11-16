@@ -60,10 +60,17 @@ namespace Galaxy.MVC.Authentication.Controllers
         [HttpPost]
         public async Task<IActionResult> SignOut()
         {
-
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
-            return RedirectToAction("Index", "Home");
+            try
+            {
+                await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+                await HttpContext.SignOutAsync(OpenIdConnectDefaults.AuthenticationScheme);
+                return RedirectToAction("Index", "Home");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            
         }
 
         [Route("signup")]
