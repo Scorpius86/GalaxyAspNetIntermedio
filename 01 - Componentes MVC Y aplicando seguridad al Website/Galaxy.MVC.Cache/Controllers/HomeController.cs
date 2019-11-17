@@ -51,7 +51,7 @@ namespace Galaxy.MVC.Cache.Controllers
                     Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(_paises)),
                     new DistributedCacheEntryOptions
                     {
-                        SlidingExpiration = TimeSpan.FromSeconds(4)
+                        SlidingExpiration = TimeSpan.FromSeconds(15)
                     }
                );
 
