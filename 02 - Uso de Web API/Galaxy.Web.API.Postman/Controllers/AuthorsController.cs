@@ -26,6 +26,7 @@ namespace Galaxy.Web.API.Postman.Controllers
         public ActionResult<List<AuthorDto>> GetAuthors()
         {
             List<Author> authorsRepo = _libraryRepository.GetAuthors();
+
             List<AuthorDto> authors = Mapper.Map<List<AuthorDto>>(authorsRepo);
             return Ok(authors);
         }

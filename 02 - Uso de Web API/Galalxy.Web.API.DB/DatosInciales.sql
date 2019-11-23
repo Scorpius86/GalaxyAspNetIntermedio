@@ -17,26 +17,26 @@ DECLARE @id UNIQUEIDENTIFIER
 
 SET @id = NEWID()
 INSERT INTO [dbo].[Author]([Id],[Name],[Age],[Genre])
-     VALUES(@id,'Axel Vazques Herrera',19,'Masculino');
+     VALUES(@id,'Hector Ramos Santisteban',27,'Masculino');
 INSERT INTO [dbo].[Book] ([Id],[AuthorId],[Title],[Description])
      VALUES (NEWID(),@id,'Desarrollo de Web API con Net Core','Libro de Programacion avanzada');
 
 
 SET @id = NEWID()
 INSERT INTO [dbo].[Author]([Id],[Name],[Age],[Genre])
-		   VALUES(@id,'Evelyn Melgarejo Gutierrez',23,'Femenino');
+		   VALUES(@id,'Nilton Mandujano Barrios',28,'Masculino');
 INSERT INTO [dbo].[Book] ([Id],[AuthorId],[Title],[Description])
      VALUES (NEWID(),@id,'Desarrollo de Web API con Net Core','Libro de Programacion avanzada');
 
 SET @id = NEWID()
 INSERT INTO [dbo].[Author]([Id],[Name],[Age],[Genre])
-		   VALUES (@id,'Angel Lucas Huaroto Parra',23,'Masculino');
+		   VALUES (@id,'Gianmarco Lopez Jara',42,'Masculino');
 INSERT INTO [dbo].[Book] ([Id],[AuthorId],[Title],[Description])
      VALUES (NEWID(),@id,'Desarrollo de Web API con Net Core','Libro de Programacion avanzada');
 
 SET @id = NEWID()
 INSERT INTO [dbo].[Author]([Id],[Name],[Age],[Genre])
-		   VALUES(@id,'Nelly Cortez Sanchez',46,'Femenino');
+		   VALUES(@id,'Agusto Azaldegui Cam',29,'Masculino');
 INSERT INTO [dbo].[Book] ([Id],[AuthorId],[Title],[Description])
      VALUES (NEWID(),@id,'Desarrollo de Web API con Net Core','Libro de Programacion avanzada');
 GO
