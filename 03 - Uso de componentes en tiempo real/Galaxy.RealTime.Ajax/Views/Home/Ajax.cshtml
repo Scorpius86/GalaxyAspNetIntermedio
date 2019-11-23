@@ -1,0 +1,100 @@
+﻿
+@{
+    ViewData["Title"] = "Ajax";
+}
+
+<div>
+    <div class="row">
+        <div style="margin-left:20px">
+            <table id="jqGrid"></table>
+            <div id="jqGridPager"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div style="margin-left:20px;">
+            <br />
+            <button id="bntInsertar" type="button" class="btn btn-outline-secondary">Insertar registro</button>
+            <button id="bntActualizar" type="button" class="btn btn-outline-secondary">Actualizar Lista</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts{ 
+    <script type="text/javascript">
+
+        let mydata = [];
+
+
+        $(document).ready(function () {
+            $("#jqGrid").jqGrid({
+                datatype: "local",
+                data: mydata,
+                height: 250,
+                rowNum: 5,
+                pager: "#jqGridPager",
+                colModel: [
+                    { label: 'Id', name: 'id', width: 100, key: true },
+                    { label: 'Nombre', name: 'name', width: 100 },
+                    { label: 'Edad', name: 'age', width: 30 },
+                    { label: 'Genero', name: 'genre', width: 50 }
+                ],
+                viewrecords: true, // show the current page, data rang and total records on the toolbar
+                caption: "Lista de autores"
+            });
+        });
+    </script>
+    <script>
+
+        loadList = (data) => {
+            $("#jqGrid").jqGrid("clearGridData", true).trigger("reloadGrid");
+            $('#jqGrid').jqGrid('setGridParam', { datatype: 'local', data: data }).trigger('reloadGrid');
+        }
+
+        refreshAuthors = () => {
+            fetch('https://localhost:44311/api/authors')
+                .then(response => {
+                    if (response.status === 200) {
+                        response.json().then(data => {
+                            loadList(data);
+                        });
+                    }
+                });
+        }
+
+        insertAuthor = () => {
+            const author = {
+                age: 37,
+                genre: "Maculino",
+                id: "7901d455-cea6-44b2-8c13-4d54d2208ab2",
+                name: "Erick Arostegui Cunza"
+            }
+
+            fetch('https://localhost:44311/api/authors', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(author)
+            })
+            .then(response => {
+                if (response.status === 201) {
+                    response.json().then(data => {
+                        alert('Se inserto correctamenete a : ' + data.name);
+                    });                    
+                }
+            });
+        }
+
+        document.getElementById("bntInsertar").addEventListener("click", e => {
+            insertAuthor();
+        });
+        document.getElementById("bntActualizar").addEventListener("click", e => {
+            refreshAuthors();
+        });
+    </script>
+    }
+

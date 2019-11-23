@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.RealTime.NoSignalR", "Galaxy.RealTime.Ajax\Galaxy.RealTime.NoSignalR.csproj", "{055CA73D-4073-4FBA-BC76-9A4FA8CBB280}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.RealTime.API", "Galaxy.RealTime.API\Galaxy.RealTime.API.csproj", "{D9ACBA4B-9108-402A-95F1-7E53D41212A1}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Galaxy.RealTime.DB", "Galaxy.RealTime.DB\Galaxy.RealTime.DB.sqlproj", "{38B2F352-332B-46B0-A7F1-C55A7C9373D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.RealTime.SignalR", "Galaxy.RealTime.SignalR\Galaxy.RealTime.SignalR.csproj", "{21322126-A9B7-4F7D-9AB3-57DE48070E96}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{055CA73D-4073-4FBA-BC76-9A4FA8CBB280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{055CA73D-4073-4FBA-BC76-9A4FA8CBB280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{055CA73D-4073-4FBA-BC76-9A4FA8CBB280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{055CA73D-4073-4FBA-BC76-9A4FA8CBB280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9ACBA4B-9108-402A-95F1-7E53D41212A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9ACBA4B-9108-402A-95F1-7E53D41212A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9ACBA4B-9108-402A-95F1-7E53D41212A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9ACBA4B-9108-402A-95F1-7E53D41212A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B2F352-332B-46B0-A7F1-C55A7C9373D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38B2F352-332B-46B0-A7F1-C55A7C9373D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38B2F352-332B-46B0-A7F1-C55A7C9373D6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{38B2F352-332B-46B0-A7F1-C55A7C9373D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38B2F352-332B-46B0-A7F1-C55A7C9373D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38B2F352-332B-46B0-A7F1-C55A7C9373D6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{21322126-A9B7-4F7D-9AB3-57DE48070E96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21322126-A9B7-4F7D-9AB3-57DE48070E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21322126-A9B7-4F7D-9AB3-57DE48070E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21322126-A9B7-4F7D-9AB3-57DE48070E96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F075797-89AD-482F-BB75-6734A4C23102}
+	EndGlobalSection
+EndGlobal
