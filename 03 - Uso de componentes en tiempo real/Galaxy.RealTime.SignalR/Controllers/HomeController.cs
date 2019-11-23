@@ -10,22 +10,35 @@ using Microsoft.AspNetCore.SignalR;
 
 namespace Galaxy.RealTime.SignalR.Controllers
 {
-    
     public class HomeController : Controller
     {
-        private readonly IHubContext<AuthorHub> _authorHub;
-        public HomeController(IHubContext<AuthorHub> authorHub)
-        {
-            _authorHub = authorHub;
-        }
+        public IHubContext<AuthorHub> _authorHub { get; set; }
 
-        public async Task<IActionResult> Mensaje()
+        public HomeController(IHubContext<AuthorHub> authHub)
         {
-            await _authorHub.Clients.All.SendAsync("MostrarMensaje", new { nemsaje = "text"});
-            return Accepted(1);
+            _authorHub = authHub;
         }
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public async Task<IActionResult> MostrarMensaje()
+        {
+            await _authorHub.Clients.All.SendAsync("MostrarMensajeCliente");
+            return Accepted(1);
+        }
+        public IActionResult About()
+        {
+            ViewData["Message"] = "Your application description page.";
+
+            return View();
+        }
+
+        public IActionResult Contact()
+        {
+            ViewData["Message"] = "Your contact page.";
+
             return View();
         }
 

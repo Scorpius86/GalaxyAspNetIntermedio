@@ -1,8 +1,29 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<div id="mensaje"></div> 
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@section Scripts{ 
+<script>
+    let connection = null;
+
+    setupConnection = () => {
+        connection = new signalR.HubConnectionBuilder()
+            .withUrl("/authorhub")
+            .build();
+
+        connection.on("MostrarMensajeCliente", function () {
+            //alert("Hola Clase SignalR");
+            document.getElementById("mensaje").innerHTML = "Hola Clase SignalR";
+        });
+
+        connection.on("finished", function () {
+            connection.stop();
+        });
+
+        connection.start().catch(err => console.log(err.toString()));
+    }
+
+    setupConnection();
+</script>
+    }
