@@ -2,6 +2,7 @@
 using Galaxy.RealTime.API.Data;
 using Galaxy.RealTime.API.Entities;
 using Galaxy.RealTime.API.Models;
+using Galaxy.RealTime.EF.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,18 +10,25 @@ using System.Threading.Tasks;
 
 namespace Galaxy.RealTime.API.Services
 {
-    public class LibraryRepository: ILibraryRepository
+    public class LibraryRepository : ILibraryRepository
     {
         public LibraryContext _libraryContext { get; set; }
+        public ModelContext _modelContext { get; set; }
 
-        public LibraryRepository(LibraryContext libraryContext)
+        public LibraryRepository(LibraryContext libraryContext, ModelContext modelContext)
         {
             _libraryContext = libraryContext;
+            _modelContext = modelContext;
         }
 
         public List<Author> GetAuthors()
         {
             return _libraryContext.Authors.ToList();
+        }
+
+        public List<Alumno> GetAlumnos()
+        {
+            return _modelContext.Alumno.ToList();
         }
 
         public Author GetAuthor(Guid id)
