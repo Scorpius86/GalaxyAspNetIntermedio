@@ -12,9 +12,9 @@
             .withUrl("/authorhub")
             .build();
 
-        connection.on("MostrarMensajeCliente", function () {
+        connection.on("MostrarMensajeCliente", function (param) {
             //alert("Hola Clase SignalR");
-            document.getElementById("mensaje").innerHTML = "Hola Clase SignalR";
+            document.getElementById("mensaje").innerHTML = "Hola Clase SignalR :" + param;
         });
 
         connection.on("finished", function () {

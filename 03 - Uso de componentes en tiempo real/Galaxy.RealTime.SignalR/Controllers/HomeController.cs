@@ -23,9 +23,9 @@ namespace Galaxy.RealTime.SignalR.Controllers
             return View();
         }
 
-        public async Task<IActionResult> MostrarMensaje()
+        public async Task<IActionResult> MostrarMensaje([FromQuery]string mensaje)
         {
-            await _authorHub.Clients.All.SendAsync("MostrarMensajeCliente");
+            await _authorHub.Clients.All.SendAsync("MostrarMensajeCliente", mensaje);
             return Accepted(1);
         }
         public IActionResult About()

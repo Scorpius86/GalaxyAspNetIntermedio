@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.572
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.RealTime.NoSignalR", "Galaxy.RealTime.Ajax\Galaxy.RealTime.NoSignalR.csproj", "{055CA73D-4073-4FBA-BC76-9A4FA8CBB280}"
 EndProject
@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.RealTime.API", "Gala
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Galaxy.RealTime.DB", "Galaxy.RealTime.DB\Galaxy.RealTime.DB.sqlproj", "{38B2F352-332B-46B0-A7F1-C55A7C9373D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.RealTime.SignalR", "Galaxy.RealTime.SignalR\Galaxy.RealTime.SignalR.csproj", "{21322126-A9B7-4F7D-9AB3-57DE48070E96}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.RealTime.SignalR", "Galaxy.RealTime.SignalR\Galaxy.RealTime.SignalR.csproj", "{21322126-A9B7-4F7D-9AB3-57DE48070E96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.RealTime.EF", "Galaxy.RealTime.EF\Galaxy.RealTime.EF.csproj", "{1C729147-8D1F-41F6-8B1F-4263F5001F59}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{21322126-A9B7-4F7D-9AB3-57DE48070E96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21322126-A9B7-4F7D-9AB3-57DE48070E96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21322126-A9B7-4F7D-9AB3-57DE48070E96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C729147-8D1F-41F6-8B1F-4263F5001F59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C729147-8D1F-41F6-8B1F-4263F5001F59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C729147-8D1F-41F6-8B1F-4263F5001F59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C729147-8D1F-41F6-8B1F-4263F5001F59}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

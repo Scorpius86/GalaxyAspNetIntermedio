@@ -14,6 +14,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Galaxy.RealTime.EF;
+using Galaxy.RealTime.EF.Data;
 
 namespace Galaxy.RealTime.API
 {
@@ -43,7 +45,11 @@ namespace Galaxy.RealTime.API
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             string conStr = Configuration["connectionStrings:libraryConnectionString"];
+            string conStrOracle = Configuration["connectionStrings:oracleConnectionString"];
+
+
             services.AddDbContext<LibraryContext>(opt => opt.UseSqlServer(conStr));
+            services.AddDbContext<ModelContext>(opt => opt.UseOracle(conStrOracle));
             services.AddScoped<ILibraryRepository, LibraryRepository>();
         }
 
