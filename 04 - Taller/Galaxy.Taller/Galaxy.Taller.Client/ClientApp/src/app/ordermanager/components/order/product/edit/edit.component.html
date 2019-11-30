@@ -1,0 +1,46 @@
+<h2 mat-dialog-title>Product</h2>
+<mat-dialog-content>
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="Order" [(ngModel)]="ViewModel.Order.OrderId" disabled />
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Product"
+             aria-label="Product"
+             [matAutocomplete]="auto"
+             [formControl]="productCtrl"
+             (input)="changeInputProduct($event)">
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="optionSelected($event)">
+        <mat-table [dataSource]="filteredProducts">
+          <ng-container matColumnDef="BrandDescription">
+            <mat-header-cell *matHeaderCellDef>Brand Description</mat-header-cell>
+            <mat-cell *matCellDef="let product">
+              {{product.BrandDescription}}
+            </mat-cell>
+          </ng-container>
+          <ng-container matColumnDef="Description">
+            <mat-header-cell *matHeaderCellDef>Description</mat-header-cell>
+            <mat-cell *matCellDef="let product">
+              {{product.Description}}
+            </mat-cell>
+          </ng-container>
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-option *matRowDef="let product; columns: displayedColumns" [value]="product">
+            <mat-row></mat-row>
+          </mat-option>
+        </mat-table>
+      </mat-autocomplete>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Quantity" [(ngModel)]="ViewModel.Quantity" />
+    </mat-form-field>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button color="primary" (click)="save()" [disabled]="isDisabled()">
+    <mat-icon>save</mat-icon> Save
+  </button>
+  <button mat-button color="primary" (click)="dismiss()">
+    <mat-icon>cancel</mat-icon> Cancel
+  </button>
+</mat-dialog-actions>

@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[Producto]
+(
+	ProductoId INT NOT NULL IDENTITY,
+	MarcaId INT NOT NULL,
+	Descripcion VARCHAR(200) NOT NULL,
+	Precio DECIMAL(18,3) DEFAULT 0,
+	UnidadMedidad VARCHAR(200) NOT NULL,
+
+	CONSTRAINT PK_Producto PRIMARY KEY (ProductoId),
+	CONSTRAINT FK_Marca FOREIGN KEY (MarcaId) REFERENCES Marca(MarcaId)
+)

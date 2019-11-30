@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "Galaxy.Taller.DB", "Galaxy.Taller.DB\Galaxy.Taller.DB.sqlproj", "{858ADE99-29FC-4B46-929E-D2802ECCC516}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Galaxy.Taller.Api", "Galaxy.Taller.Api\Galaxy.Taller.Api.csproj", "{4DDC1BA0-D51C-4C81-B8A5-361A0FD3CE94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galaxy.Taller.Client", "Galaxy.Taller.Client\Galaxy.Taller.Client.csproj", "{D6F2E0CF-7757-4E43-B677-5FBB9C77253C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{858ADE99-29FC-4B46-929E-D2802ECCC516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{858ADE99-29FC-4B46-929E-D2802ECCC516}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{858ADE99-29FC-4B46-929E-D2802ECCC516}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{858ADE99-29FC-4B46-929E-D2802ECCC516}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{858ADE99-29FC-4B46-929E-D2802ECCC516}.Release|Any CPU.Build.0 = Release|Any CPU
+		{858ADE99-29FC-4B46-929E-D2802ECCC516}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4DDC1BA0-D51C-4C81-B8A5-361A0FD3CE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDC1BA0-D51C-4C81-B8A5-361A0FD3CE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDC1BA0-D51C-4C81-B8A5-361A0FD3CE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDC1BA0-D51C-4C81-B8A5-361A0FD3CE94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6F2E0CF-7757-4E43-B677-5FBB9C77253C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6F2E0CF-7757-4E43-B677-5FBB9C77253C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6F2E0CF-7757-4E43-B677-5FBB9C77253C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6F2E0CF-7757-4E43-B677-5FBB9C77253C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {846AEBE3-77F7-4501-987C-E27881D3A5AD}
+	EndGlobalSection
+EndGlobal

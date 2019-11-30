@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Sexo]
+(
+	SexoId INT NOT NULL IDENTITY,
+	Descripcion VARCHAR(200),
+
+	CONSTRAINT PK_Sexo PRIMARY KEY (SexoId)
+
+)

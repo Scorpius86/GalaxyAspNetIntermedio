@@ -1,0 +1,37 @@
+<div *ngIf="!ViewModel.User">
+  <mat-spinner></mat-spinner>
+</div>
+<div *ngIf="ViewModel.User">
+  <mat-card>
+    <mat-card-header fxLayout="column" fxLayoutAlign="space-between stretch">      
+      <mat-card-title class="margin-top-20">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <mat-icon mat-card-avatar svgIcon="svg-{{ViewModel.User.UserId}}"></mat-icon>
+          <h2 class="margin-0 margin-left-20">{{ ViewModel.User.FullName }}</h2>
+        </div>
+      </mat-card-title>
+      
+      <mat-card-subtitle class="margin-0">        
+        <div fxLayout="column" fxLayoutAlign="center end">
+          <p class="margin-0 margin-bottom-16"><label>Cantidad Pedidos : </label>{{ViewModel.OrderListViewModel.OrdersCount}}</p>
+          <p class="margin-0"><label>Monto Total de pedidos : </label>{{ViewModel.OrderListViewModel.OrdersTotalMount}}</p>
+        </div>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-tab-group [selectedIndex]="TabSelected" (selectedIndexChange)="ChangeTab($event)">
+        <mat-tab label="Orders">
+          <app-order-list [(ViewModel)]="ViewModel.OrderListViewModel"
+                          (RowDblClick)="LoadOrderDetail($event)">
+          </app-order-list>
+        </mat-tab>
+        <mat-tab label="Order N° {{ViewModel.OrderProductListViewModel.Order.OrderId}}"
+                 [disabled]="isDisabled">
+          <app-order-product-list [(ViewModel)]="ViewModel.OrderProductListViewModel"
+                                  (LoadOrders)="LoadOrders()"></app-order-product-list>
+        </mat-tab>
+      </mat-tab-group>
+    </mat-card-content>
+  </mat-card>
+  </div>
+

@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Marca]
+(
+	MarcaId INT NOT NULL IDENTITY,
+	Descripcion VARCHAR(200),
+
+	CONSTRAINT PK_Marca PRIMARY KEY (MarcaId)
+)

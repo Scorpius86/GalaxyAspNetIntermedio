@@ -1,0 +1,19 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}
+.example-full-width {
+  width: 100%;
+}
+
+.itemProduct{
+  float:left;
+}
+.itemProductSpacer {
+  float: left;
+  border-right: solid 1px;
+}
